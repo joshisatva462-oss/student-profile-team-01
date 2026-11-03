@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Skills Portfolio</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f8f9fa; 
+            color: #343a40; 
+            padding: 40px; 
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: auto; 
+            background: #ffffff; 
+            padding: 30px 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+        h1 { 
+            text-align: center; 
+            color: #212529; 
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .person-card { 
+            margin-bottom: 25px; 
+            background: #fdfdfe;
+            padding: 20px 25px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s ease-in-out;
+        }
+        .person-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+        h2 { 
+            color: #2c3e50; 
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .skills-list { 
+            list-style-type: none; 
+            padding-left: 0; 
+            margin: 0;
+        }
+        .skill-tag {
+            background: #e9ecef;
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 0 8px 8px 0;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #495057;
+            font-weight: 500;
+        }
+        /* Custom colors for each person's tags */
+        .person-card:nth-child(2) .skill-tag { background: #d1ecf1; color: #0c5460; 
+        font-size:20px;
+        }
+        
+        .person-card:nth-child(3) .skill-tag { background: #d4edda; color: #155724; 
+        font-size:20px;}
+        .person-card:nth-child(4) .skill-tag { background: #fff3cd; color: #856404; 
+        font-size:20px;}
+        .person-card:nth-child(5) .skill-tag { background: #fff3cd; color: #856404; 
+            font-size:20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Team Skills Overview</h1>
+        
+        <!-- Prince Aklecha -->
+        <div class="person-card">
+            <h2>Prince Aklecha</h2>
+            <ul class="skills-list">
+                <li class="skill-tag">Software Engineering</li>
+                <li class="skill-tag">Problem Solving</li>
+                <li class="skill-tag">Team Collaboration</li>
+            </ul>
+        </div>
+        
+        <!-- Siddhart Damodar -->
+        <div class="person-card">
+            <h2>Siddharth Damodar</h2>
+            <ul class="skills-list">
+                <li class="skill-tag">Data Analysis</li>
+                <li class="skill-tag">Strategic Planning</li>
+                <li class="skill-tag">Project Management</li>
+            </ul>
+        </div>
+        
+        <!-- Rachit Angadi -->
+        <div class="person-card">
+            <h2>Rachit Angadi</h2>
+            <ul class="skills-list">
+                <li class="skill-tag">System Architecture</li>
+                <li class="skill-tag">Product Design</li>
+                <li class="skill-tag">Agile Development</li>
+            </ul>
+            </div>
+            <div class="person-card">
+            <h2>Satva Joshi</h2>
+            <ul> 
+                <li class="skill-tag">UI/UX Design</li>
+                <li class="skill-tag">Cloud Computing</li>
+                <li class="skill-tag">DevOps</li>
+        </div>
+        
+    </div>
+</body>
+</html>
