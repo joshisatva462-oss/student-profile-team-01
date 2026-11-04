@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Contact | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Team Contacts - Student Profile Repository</title>
     <style>
         :root {
             --bg-color: #f9f8f6;
@@ -22,115 +21,138 @@
             line-height: 1.6;
             margin: 0;
             padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
-        .contact-container {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         h1 {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
+            font-size: 2.2rem;
             color: var(--accent-color);
+            margin-bottom: 10px;
             letter-spacing: -0.5px;
         }
 
         p.subtitle {
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 30px;
+            font-size: 1rem;
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
 
-        label {
-            display: block;
-            font-size: 0.85rem;
+        .contact-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .role-badge {
+            display: inline-block;
+            background-color: #eef2f5;
+            color: var(--accent-color);
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 6px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin: 0 0 16px 0;
+            color: var(--text-primary);
+        }
+
+        .contact-detail {
+            font-size: 0.9rem;
             color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-size: 1rem;
-            background-color: #fcfcfc;
-            box-sizing: border-box;
-            transition: border-color 0.2s ease;
+        .contact-detail strong {
+            color: var(--text-primary);
+            min-width: 70px;
         }
 
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
-            background-color: #fff;
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
         }
 
-        textarea {
-            resize: vertical;
-            height: 120px;
-        }
-
-        button {
-            background-color: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            transition: background-color 0.2s ease;
-        }
-
-        button:hover {
-            background-color: #1a252f;
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <div class="contact-container">
-        <h1>Get in Touch</h1>
-        <p class="subtitle">Feel free to reach out for collaboration or project inquiries.</p>
-        
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <div class="container">
+        <header>
+            <h1>Team Contact Directory</h1>
+            <p class="subtitle">Student Profile Repository — Team Members & Credentials</p>
+        </header>
+
+        <div class="contacts-grid">
+            <!-- Student 1 -->
+            <div class="contact-card">
+                <span class="role-badge">Student 1</span>
+                <h2>Team Lead & Reviewer</h2>
+                <div class="contact-detail"><strong>Name:</strong> Satva Joshi</div>
+                <div class="contact-detail"><strong>Email:</strong> <a href="mailto:lead@example.com">joshisatva462@gmail.com</a></div>
+                <div class="contact-detail"><strong>GitHub:</strong> <a href="#" target="_blank">@joshisatva462-oss</a></div>
             </div>
 
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            <!-- Student 2 -->
+            <div class="contact-card">
+                <span class="role-badge">Student 2</span>
+                <h2>Profile Developer</h2>
+                <div class="contact-detail"><strong>Name:</strong> Prince Aklecha</div>
+                <div class="contact-detail"><strong>Email:</strong> <a href="mailto:student2@example.com">student2@example.com</a></div>
+                <div class="contact-detail"><strong>GitHub:</strong> <a href="#" target="_blank">@princeaklecha-bot</a></div>
             </div>
 
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            <!-- Student 3 -->
+            <div class="contact-card">
+                <span class="role-badge">Student 3</span>
+                <h2>Skills Developer</h2>
+                <div class="contact-detail"><strong>Name:</strong>Siddharth Damodar Das</div>
+                <div class="contact-detail"><strong>Email:</strong> <a href="mailto:student3@example.com">student3@example.com</a></div>
+                <div class="contact-detail"><strong>GitHub:</strong> <a href="#" target="_blank">@siddamodar06-dotcom</a></div>
             </div>
 
-            <button type="submit">Send Message</button>
-        </form>
+            <!-- Student 4 -->
+            <div class="contact-card">
+                <span class="role-badge">Student 4</span>
+                <h2>Contact Developer</h2>
+                <div class="contact-detail"><strong>Name:</strong> Rachit</div>
+                <div class="contact-detail"><strong>Email:</strong> <a href="mailto:rachit@example.com">rachit@example.com</a></div>
+                <div class="contact-detail"><strong>GitHub:</strong> <a href="https://github.com/Rachit6174" target="_blank">@Rachit6174</a></div>
+            </div>
+        </div>
     </div>
 
 </body>
